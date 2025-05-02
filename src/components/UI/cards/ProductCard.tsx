@@ -3,7 +3,7 @@ import { TProduct } from "@/src/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaCartShopping, FaEye, FaHeart } from "react-icons/fa6";
+import { FaCartPlus, FaEye, FaHeart } from "react-icons/fa6";
 import "../../../styles/product.css";
 import { calculateDiscountPercentage } from "@/src/utils/calculateDiscountPercentage";
 
@@ -32,7 +32,7 @@ const ProductCard = ({ product }: { product: TProduct }) => {
           className="w-full h-full object-fill object-center rounded-[10px] transition-all ease-in-out duration-300 group-hover:scale-110"
         />
 
-        <div className="flex justify-evenly items-center gap-1 px-2 translate-y-full transition-all ease-in-out duration-300 group-hover:-translate-y-12">
+        <div className="flex justify-evenly items-center gap-1 px-2 translate-y-full transition-all ease-in-out duration-300 group-hover:-translate-y-12 z-10">
           <Link href={`/product-details/${id}`}>
             <button className="product-card-btn">
               <FaEye />
@@ -51,7 +51,7 @@ const ProductCard = ({ product }: { product: TProduct }) => {
             disabled={product?.stock <= 0}
             // onClick={() => handleAddToCart(1, product)}
           >
-            <FaCartShopping />
+            <FaCartPlus />
           </button>
         </div>
       </div>

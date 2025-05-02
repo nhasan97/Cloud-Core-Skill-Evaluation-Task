@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 .product-card-btn {
-    @apply size-10 bg-[white] hover:bg-black text-black hover:text-white text-lg text-center flex justify-center items-center transition-all duration-300 rounded-full;
+    @apply size-10 bg-[white] hover:bg-[#202634] text-[#202634] hover:text-white text-lg text-center flex justify-center items-center transition-all duration-300 rounded-full;
 }
