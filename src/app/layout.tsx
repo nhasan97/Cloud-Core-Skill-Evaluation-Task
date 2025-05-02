@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import { geistMono, geistSans } from "../config/fontConfig";
+import { poppins } from "../config/fontConfig";
 import Providers from "../lib/Providers";
 
 export const metadata: Metadata = {
@@ -15,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>
