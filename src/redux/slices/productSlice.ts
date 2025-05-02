@@ -1,7 +1,8 @@
 import { getProducts } from "@/src/services/productServices/getProducts";
+import { TProductState } from "@/src/types";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+const initialState: TProductState = {
   products: [],
   status: "idle",
   error: "",

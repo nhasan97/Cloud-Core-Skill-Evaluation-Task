@@ -31,3 +31,9 @@ export type TProduct = {
   category: TCategory;
   product_images: TProductImages[];
 };
+
+export type TProductState = {
+  products: TProduct[];
+  status: "idle" | "loading" | "succeeded" | failed;
+  error: string;
+};
