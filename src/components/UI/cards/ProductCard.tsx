@@ -5,18 +5,11 @@ import Link from "next/link";
 import React from "react";
 import { FaCartShopping, FaEye, FaHeart } from "react-icons/fa6";
 import "../../../styles/product.css";
+import { calculateDiscountPercentage } from "@/src/utils/calculateDiscountPercentage";
 
 const ProductCard = ({ product }: { product: TProduct }) => {
   const { id, name, image, price, stock, is_discount, discount_amount } =
     product;
-
-  const calculateDiscountPercentage = (
-    price: number,
-    discount_amount: number
-  ) => {
-    const discount_percentage = Math.round((discount_amount / price) * 100);
-    return discount_percentage;
-  };
 
   return (
     <div className="w-full h-fit bg-white p-1 space-y-3 rounded-xl border border-[#75757538] group">
