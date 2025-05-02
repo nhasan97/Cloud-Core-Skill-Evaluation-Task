@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.navbar-links {
+    @apply text-[#202634] tracking-widest relative
+}
+
+.navbar-links::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #202634;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.navbar-links:hover::after {
+    width: 100%;
+    transition: .3s ease-in;
+}
