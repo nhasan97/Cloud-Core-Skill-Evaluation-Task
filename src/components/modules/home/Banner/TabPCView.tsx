@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const TabPCView = () => {
   return (
-    <div className="hidden sm:block bg-gray-100 w-full mb-20">
+    <div className="hidden sm:block bg-gray-100 w-full">
       <Container>
         <div className="w-full h-110 2xl:h-150 flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="w-[55%] md:w-[60%] h-[90%] relative">

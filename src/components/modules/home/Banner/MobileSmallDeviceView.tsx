@@ -6,7 +6,7 @@ const MobileSmallDeviceView = () => {
   return (
     <div className="block sm:hidden w-full">
       <Container>
-        <div className="w-full h-160 object-cover object-center bg-[url('/assets/images/banner-img-2.png')] bg-cover bg-center bg-no-repeat rounded-b-[10px]">
+        <div className="w-full h-160 object-cover object-center bg-[url('/assets/images/banner-img-2.png')] bg-cover bg-center bg-no-repeat rounded-[10px]">
           <div className="p-5 space-y-6">
             <p className="max-w-140 mx-auto text-[#a5a5a5] text-center">
               Explore our latest collection of premium menswear – from casual
