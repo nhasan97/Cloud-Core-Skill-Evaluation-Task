@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+.footer-links {
+    @apply text-[#757575] text-base hover:underline
+}
+
+.footer-social-icon {
+    @apply text-[#757575] text-2xl mx-auto lg:mx-0 cursor-pointer
+}
