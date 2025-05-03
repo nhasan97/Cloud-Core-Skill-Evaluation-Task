@@ -29,7 +29,7 @@ const ProductCard = ({ product }: { product: TProduct }) => {
           src={envConfig.imageUrl + "/" + image}
           loading="lazy"
           alt={`Image of ${name}`}
-          className="w-full h-full object-fill object-center rounded-[10px] transition-all ease-in-out duration-300 group-hover:scale-110"
+          className="w-full h-full bg-gray-100 object-fill object-center rounded-[10px] transition-all ease-in-out duration-300 group-hover:scale-110"
         />
 
         <div className="flex justify-evenly items-center gap-1 px-2 translate-y-full transition-all ease-in-out duration-300 group-hover:-translate-y-12 z-10">

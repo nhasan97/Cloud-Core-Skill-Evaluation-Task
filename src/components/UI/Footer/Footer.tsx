@@ -8,12 +8,12 @@ import "../../../styles/footer.css";
 
 const Footer = () => {
   return (
-    <div className="w-full py-10 bg-[url('/assets/images/footer-bg.jpg')] bg-cover bg-center bg-no-repeat bg-[#181818] bg-blend-overlay">
+    <div className="w-full py-10 bg-[url('/assets/images/footer-bg.jpg')] bg-cover bg-center bg-no-repeat bg-[#000000e5] bg-blend-overlay bg-fixed">
       <div className="text-center space-y-6 mb-12">
         <p className="text-4xl md:text-5xl lg:text-6xl text-white ">
           Explore Our Catalog
         </p>
-        <p className="max-w-180 mx-auto px-5 text-base text-[#a5a5a5] tracking-wider">
+        <p className="max-w-180 mx-auto px-5 text-base text-[#c5c5c5] tracking-wider">
           Gritly crafts modern essentials for men who move with purpose.
           Designed for comfort, built for everyday grit. Browse through our
           fashion catalog for wide range of stylish clothing options.
