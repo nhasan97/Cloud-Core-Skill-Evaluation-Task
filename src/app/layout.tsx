@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Gritly | Wear Your Drive",
   description: "Modern men’s clothing brand",
   icons: {
-    icon: "/logo.png",
+    icon: "/assets/icons/logo.png",
   },
 };
 
