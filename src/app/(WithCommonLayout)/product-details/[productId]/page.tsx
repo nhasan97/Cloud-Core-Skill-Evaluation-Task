@@ -4,6 +4,7 @@
 
 import Container from "@/src/components/layouts/Container";
 import ImageSlider from "@/src/components/modules/product-details/ImageSlider";
+import ProductInfoSection from "@/src/components/modules/product-details/ProductInfoSection";
 import LoadingPage from "@/src/components/shared-components/LoadingPage";
 import NoData from "@/src/components/shared-components/NoData";
 import BreadCrumb from "@/src/components/UI/BreadCrumb";
@@ -46,6 +47,10 @@ const ProductDetailsPage = () => {
             <div className="w-full flex flex-col md:flex-row gap-12">
               <div className="w-full md:w-1/2">
                 <ImageSlider productImages={matchedProduct?.product_images} />
+              </div>
+
+              <div className="w-full md:w-1/2">
+                <ProductInfoSection product={matchedProduct} />
               </div>
             </div>
           </div>
