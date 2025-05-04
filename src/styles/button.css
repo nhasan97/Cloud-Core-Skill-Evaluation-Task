@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
 .btn-primary-style {
-    @apply bg-white hover:bg-[#757575] text-[#202634] hover:text-white transition-all font-semibold flex items-center justify-center gap-2 px-2 mx-auto py-1 rounded-full
+    @apply bg-white hover:bg-[#757575] text-[#202634] hover:text-white transition-all font-semibold flex items-center justify-center gap-2 px-2 mx-auto py-1 rounded-full cursor-pointer
+}
+
+.btn-icon-only-style {
+    @apply size-10 bg-[#202634] hover:bg-[#757575] text-white hover:text-[#202634] text-lg text-center flex justify-center items-center transition-all duration-300 rounded-full cursor-pointer
 }
