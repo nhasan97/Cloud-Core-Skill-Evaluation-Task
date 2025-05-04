@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.badge-primary-style {
+    @apply size-fit text-sm px-2 py-1 rounded-full
+}
