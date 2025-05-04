@@ -6,6 +6,7 @@ import React from "react";
 import { FaCartPlus, FaEye, FaHeart } from "react-icons/fa6";
 import "../../../styles/product.css";
 import { calculateDiscountPercentage } from "@/src/utils/calculateDiscountPercentage";
+import { toTitleCase } from "@/src/utils/toTitleCase";
 
 const ProductCard = ({ product }: { product: TProduct }) => {
   const { id, name, image, price, stock, is_discount, discount_amount } =
@@ -57,7 +58,9 @@ const ProductCard = ({ product }: { product: TProduct }) => {
       </div>
 
       <div className="flex flex-col gap-2 px-2 py-3">
-        <h6 className="text-lg text-[#757575] font-medium">{name}</h6>
+        <h6 className="text-lg text-[#757575] font-medium">
+          {toTitleCase(name)}
+        </h6>
 
         <div className="w-full flex justify-between items-center">
           {is_discount === 1 ? (
