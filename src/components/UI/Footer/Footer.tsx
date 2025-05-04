@@ -19,7 +19,7 @@ const Footer = () => {
           Designed for comfort, built for everyday grit. Browse through our
           fashion catalog for wide range of stylish clothing options.
         </p>
-        <button className="btn-primary-style">
+        <button className="btn-primary-style btn-style-light">
           <p>Learn More</p>
           <FaArrowRight />
         </button>

@@ -15,7 +15,7 @@ const MobileSmallDeviceView = () => {
             </p>
 
             <button
-              className="btn-primary-style"
+              className="btn-primary-style btn-style-light"
               onClick={() => {
                 document
                   .getElementById("product-section")
