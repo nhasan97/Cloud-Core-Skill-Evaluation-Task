@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.btn-primary-style {
+    @apply bg-white hover:bg-[#757575] text-[#202634] hover:text-white transition-all font-semibold flex items-center justify-center gap-2 px-2 mx-auto py-1 rounded-full
+}

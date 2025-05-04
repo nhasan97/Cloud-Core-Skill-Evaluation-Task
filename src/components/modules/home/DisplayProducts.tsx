@@ -19,7 +19,10 @@ const DisplayProducts = () => {
 
   return (
     <Container>
-      <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+      <div
+        id="product-section"
+        className="w-full h-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 py-20"
+      >
         {status === "loading" ? (
           Array.from({ length: 4 }).map((_, index) => (
             <ProductCardSkeleton key={index} />

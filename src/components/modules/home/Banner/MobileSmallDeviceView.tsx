@@ -1,6 +1,7 @@
+"use client";
+
 import Container from "@/src/components/layouts/Container";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa6";
 
 const MobileSmallDeviceView = () => {
   return (
@@ -13,9 +14,15 @@ const MobileSmallDeviceView = () => {
               classics to sharp essentials.
             </p>
 
-            <button className="bg-white text-[#202634] font-semibold flex items-center justify-center gap-2 px-2 mx-auto py-1 rounded-full">
+            <button
+              className="btn-primary-style"
+              onClick={() => {
+                document
+                  .getElementById("product-section")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <p>Shop Now</p>
-              <FaArrowRight />
             </button>
           </div>
 

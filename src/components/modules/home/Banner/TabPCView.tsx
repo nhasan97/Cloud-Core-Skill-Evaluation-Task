@@ -1,9 +1,10 @@
+"use client";
+
 import Container from "@/src/components/layouts/Container";
 import Image from "next/image";
 import React from "react";
 import bannerImage1 from "../../../../../public/assets/images/banner-img-1.png";
 import logo from "../../../../../public/assets/icons/logo.png";
-import { FaArrowRight } from "react-icons/fa6";
 
 const TabPCView = () => {
   return (
@@ -36,9 +37,15 @@ const TabPCView = () => {
                 </p>
               </div>
 
-              <button className="bg-white text-[#202634] font-semibold flex items-center justify-center gap-2 px-2 mx-auto py-1 rounded-full">
+              <button
+                className="btn-primary-style"
+                onClick={() => {
+                  document
+                    .getElementById("product-section")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <p>Shop Now</p>
-                <FaArrowRight />
               </button>
             </div>
 

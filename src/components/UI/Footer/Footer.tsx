@@ -5,6 +5,7 @@ import { IoLogoFacebook, IoLogoPinterest, IoLogoTwitter } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import Link from "next/link";
 import "../../../styles/footer.css";
+import "../../../styles/button.css";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
           Designed for comfort, built for everyday grit. Browse through our
           fashion catalog for wide range of stylish clothing options.
         </p>
-        <button className="bg-white text-[#202634] font-semibold flex items-center justify-center gap-2 px-2 mx-auto py-1 rounded-full">
+        <button className="btn-primary-style">
           <p>Learn More</p>
           <FaArrowRight />
         </button>
