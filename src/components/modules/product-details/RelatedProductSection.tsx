@@ -32,6 +32,7 @@ const RelatedProductSection = ({
                 product?.category?.name === category?.name &&
                 product?.id !== productId
             )
+            .filter((product: TProduct) => product?.is_published === 1)
             .map((product: TProduct) => (
               <ProductCard key={product.unique_id} product={product} />
             ))
