@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "2",
+    "image": "https://i.ibb.co.com/gWvtTKM/1000-F-207684339-d-FUUI0le-Wv-Na-KJR6-Da0-Zsw-Uh-LI4-Yz-IGT.jpg",
+    "name": "Mark Turner",
+    "say": "I bought the Gritly Thermal Hooded Jacket for my daily commute, and it's easily the warmest and most comfortable jacket I’ve owned. The fit is athletic but not too tight, and the inside fleece lining is a game-changer. Will definitely grab another color for next season!",
+    "rating": 4
+  },
+  {
+    "_id": "4",
+    "image": "https://i.ibb.co.com/PDZfYBF/Glamour-Photography-Singapore-man-smiling-candid-natural-photoshoot.jpg",
+    "name": "John Doe",
+    "say": "Gritly’s Utility Zip Hoodie looks sharp and feels durable. I wear it while riding my bike and it keeps me warm without overheating. Pockets are deep, zippers are smooth — just wish it came in more colors.",
+    "rating": 3
+  },
+  {
+    "_id": "6",
+    "image": "https://i.ibb.co.com/DgC6z50/4916435be3128b37bf3ffe88c59456c0.jpg",
+    "name": "James Harris",
+    "say": "You can tell Gritly means quality. The stitching on my jacket is solid, the fabric feels premium, and it handled a surprise rain without soaking through. People actually asked me where I got it!",
+    "rating": 4
+  },
+  {
+    "_id": "8",
+    "image": "https://i.ibb.co.com/HP7V8Tx/images-3.jpg",
+    "name": "Chris Brown",
+    "say": "Got the basic black hoodie from Gritly and it quickly became my go-to layer. The material is soft but doesn’t pill easily. Fits true to size and works for both gym and casual outings.",
+    "rating": 4
+  }
+]

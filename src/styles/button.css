@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 .btn-primary-style {
-    @apply font-semibold flex items-center justify-center gap-2 p-2 mx-auto rounded-full cursor-pointer
+    @apply font-semibold text-sm md:text-base flex items-center justify-center gap-2 p-2 mx-auto rounded-full cursor-pointer
 }
 
 .btn-style-icon-only {
-    @apply size-10 text-lg text-center flex justify-center items-center rounded-full cursor-pointer
+    @apply size-10 text-base md:text-lg text-center flex justify-center items-center rounded-full cursor-pointer
 }
 
 .btn-style-outlined {
-    @apply bg-transparent hover:bg-[#202634] text-[#202634] hover:text-white transition-all font-semibold flex items-center justify-center gap-2 p-2 mx-auto rounded-full cursor-pointer border
+    @apply bg-transparent hover:bg-[#202634] text-[#202634] hover:text-white transition-all font-semibold text-sm md:text-base flex items-center justify-center gap-2 p-2 mx-auto rounded-full cursor-pointer border
 }
 
 .btn-style-light {

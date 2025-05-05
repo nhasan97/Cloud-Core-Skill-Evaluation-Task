@@ -1,0 +1,5 @@
+.slider-scrollbar-style {
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+}
