@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import React, { useState } from "react";
 import MainLogo from "../../shared-components/MainLogo";
@@ -9,8 +11,12 @@ import {
 } from "react-icons/fa6";
 import Image from "next/image";
 import Container from "../../layouts/Container";
+import { useCartContext } from "@/src/contexts/CartContextProvider";
+import { TCartContext } from "@/src/types";
 
 const MobileSmallDeviceView = () => {
+  const { itemsInCartCount } = useCartContext() as TCartContext;
+
   const [openSidebar, setOpenSidebar] = useState<boolean>(false);
 
   return (
@@ -25,13 +31,15 @@ const MobileSmallDeviceView = () => {
           </div>
 
           <div className="w-1/2 flex justify-end gap-6">
-            <div className="relative">
-              <FaCartShopping className="text-xl text-[#202634]" />
+            <Link href={"/cart"}>
+              <div className="relative">
+                <FaCartShopping className="text-xl text-[#202634]" />
 
-              <p className="size-5 bg-[#757575] text-white text-sm text-center rounded-full absolute -top-3 -right-3">
-                0
-              </p>
-            </div>
+                <p className="size-5 bg-[#757575] text-white text-sm text-center rounded-full absolute -top-3 -right-3">
+                  {itemsInCartCount}
+                </p>
+              </div>
+            </Link>
 
             {openSidebar ? (
               <FaXmark

@@ -1,11 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MainLogo from "../../shared-components/MainLogo";
 import { FaCartShopping, FaChevronDown, FaHeart } from "react-icons/fa6";
 import Image from "next/image";
 import Container from "../../layouts/Container";
+import { useCartContext } from "@/src/contexts/CartContextProvider";
+import { TCartContext } from "@/src/types";
 
 const TabPcView = () => {
+  const { itemsInCartCount } = useCartContext() as TCartContext;
+
   const [showNavbar, setShowNavbar] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
 
@@ -73,11 +79,12 @@ const TabPcView = () => {
               <Link href="#">
                 <FaHeart className="text-xl text-[#202634]" />
               </Link>
-              <Link href="#">
+              <Link href="/cart">
                 <div className="relative">
                   <FaCartShopping className="text-xl text-[#202634]" />
+
                   <p className="size-5 bg-[#757575] text-white text-sm text-center rounded-full absolute -top-3 -right-3">
-                    0
+                    {itemsInCartCount}
                   </p>
                 </div>
               </Link>
