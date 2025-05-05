@@ -16,25 +16,25 @@ const ProductInfoSection = ({ product }: { product: TProduct }) => {
   return (
     <div className="w-full h-full space-y-12">
       <div className="space-y-1">
-        <h1 className="text-4xl text-[#202634] font-semibold">
+        <h1 className="text-3xl lg:text-4xl text-[#202634] font-semibold">
           {toTitleCase(product?.name)}
         </h1>
 
         <p className="badge-primary-style bg-gray-500 text-white">
-          {product?.category?.name}
+          {toTitleCase(product?.category?.name)}
         </p>
       </div>
 
       {product?.has_variation ? <div>Show Variation</div> : ""}
 
-      {product?.is_discount === 1 ? (
-        <div className="space-y-1">
-          <h5 className="text-3xl text-[#202634] font-medium">
+      {product?.is_discount === 0 ? (
+        <div className="space-y-2">
+          <h5 className="text-2xl lg:text-3xl text-[#202634] font-medium">
             ৳{product?.price - parseFloat(product?.discount_amount)}
           </h5>
 
           <div className="flex items-center gap-2">
-            <p className="text-xl text-[#757575]">
+            <p className="text-lg lg:text-xl text-[#757575]">
               <s>৳{product?.price}</s>
             </p>
             <p className="bg-gray-500 text-xs text-white px-2 py-1 rounded-lg">
@@ -46,9 +46,13 @@ const ProductInfoSection = ({ product }: { product: TProduct }) => {
               %
             </p>
           </div>
+
+          {product?.discount_date && (
+            <p>Discount Available Till | {product?.discount_date}</p>
+          )}
         </div>
       ) : (
-        <h5 className="text-3xl text-[#202634] font-medium">
+        <h5 className="text-2xl lg:text-3xl text-[#202634] font-medium">
           ৳{product?.price}
         </h5>
       )}
@@ -86,7 +90,7 @@ const ProductInfoSection = ({ product }: { product: TProduct }) => {
 
       <div className="tracking-wide space-y-3">
         <p>SKU | {product?.code}</p>
-        <p>Category | {product?.category?.name}</p>
+        <p>Category | {toTitleCase(product?.category?.name)}</p>
         <div className="flex items-center gap-2">
           <p>Status|</p>
           {product?.stock <= 0 ? (

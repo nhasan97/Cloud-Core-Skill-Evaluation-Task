@@ -23,7 +23,11 @@ const ImageSlider = ({
       <div className="w-full lg:flex-1 flex justify-between items-center gap-3 relative">
         {productImages?.length > 1 && (
           <button
-            className="btn-style-icon-only btn-style-light absolute left-2"
+            className={`${
+              activeImage <= 0
+                ? "hidden"
+                : "btn-style-icon-only btn-style-light absolute left-2"
+            } `}
             onClick={() => setActiveImage(activeImage - 1)}
             disabled={activeImage <= 0}
           >
@@ -36,12 +40,16 @@ const ImageSlider = ({
           height={600}
           src={`${envConfig.imageUrl}/${productImages[activeImage]?.name}`}
           alt="Product Image"
-          className="w-full h-full bg-gray-100 object-fill object-center rounded-[10px]"
+          className="w-full h-full lg:h-128 bg-gray-100 object-fill object-center rounded-[10px]"
         />
 
         {productImages?.length > 1 && (
           <button
-            className="btn-style-icon-only btn-style-light absolute right-2"
+            className={`${
+              activeImage >= productImages?.length - 1
+                ? "hidden"
+                : "btn-style-icon-only btn-style-light btn-style-light absolute right-2"
+            } `}
             onClick={() => setActiveImage(activeImage + 1)}
             disabled={activeImage >= productImages?.length - 1}
           >
