@@ -1,5 +1,5 @@
 import envConfig from "@/src/config/envConfig";
-import { TProduct } from "@/src/types";
+import { TCartContext, TProduct } from "@/src/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,10 +7,13 @@ import { FaCartPlus, FaEye, FaHeart } from "react-icons/fa6";
 import "../../../styles/product.css";
 import { calculateDiscountPercentage } from "@/src/utils/calculateDiscountPercentage";
 import { toTitleCase } from "@/src/utils/toTitleCase";
+import { useCartContext } from "@/src/contexts/CartContextProvider";
 
 const ProductCard = ({ product }: { product: TProduct }) => {
   const { id, name, image, price, stock, is_discount, discount_amount } =
     product;
+
+  const { handleAddToCart } = useCartContext() as TCartContext;
 
   return (
     <div className="w-full h-fit bg-white p-1 space-y-3 rounded-xl border border-[#75757538] group">
@@ -50,7 +53,7 @@ const ProductCard = ({ product }: { product: TProduct }) => {
           <button
             className="product-card-btn"
             disabled={product?.stock <= 0}
-            // onClick={() => handleAddToCart(1, product)}
+            onClick={() => handleAddToCart(product)}
           >
             <FaCartPlus />
           </button>

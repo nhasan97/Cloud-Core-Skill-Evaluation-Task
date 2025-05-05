@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TProduct } from "@/src/types";
+import { TCartContext, TProduct } from "@/src/types";
 import { calculateDiscountPercentage } from "@/src/utils/calculateDiscountPercentage";
 import {
   FaCartPlus,
@@ -9,9 +9,12 @@ import {
 } from "react-icons/fa6";
 import { toTitleCase } from "@/src/utils/toTitleCase";
 import "../../../styles/badge.css";
+import { useCartContext } from "@/src/contexts/CartContextProvider";
 
 const ProductInfoSection = ({ product }: { product: TProduct }) => {
-  const [desiredQty, setDesiredQty] = useState<number>(0);
+  const [desiredQty, setDesiredQty] = useState<number>(1);
+
+  const { handleAddToCart } = useCartContext() as TCartContext;
 
   return (
     <div className="w-full h-full space-y-12">
@@ -79,7 +82,10 @@ const ProductInfoSection = ({ product }: { product: TProduct }) => {
         </div>
 
         <div className="flex justify-between items-center gap-6">
-          <button className="btn-primary-style btn-style-dark bg-[#202634] flex-1">
+          <button
+            className="btn-primary-style btn-style-dark bg-[#202634] flex-1"
+            onClick={() => handleAddToCart(product, desiredQty)}
+          >
             <FaCartPlus className="text-xl" /> Add to Cart
           </button>
           <button className="btn-primary-style btn-style-outlined flex-1">
