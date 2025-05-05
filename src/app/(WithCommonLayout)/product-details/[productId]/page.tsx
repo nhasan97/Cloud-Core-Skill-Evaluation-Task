@@ -4,7 +4,11 @@
 
 import Container from "@/src/components/layouts/Container";
 import ImageSlider from "@/src/components/modules/product-details/ImageSlider";
+import ProductDescriptionSection from "@/src/components/modules/product-details/ProductDescriptionSection";
 import ProductInfoSection from "@/src/components/modules/product-details/ProductInfoSection";
+import RelatedProductSection from "@/src/components/modules/product-details/RelatedProductSection";
+import ReviewsSection from "@/src/components/modules/product-details/ReviewsSection";
+import VideoSection from "@/src/components/modules/product-details/VideoSection";
 import LoadingPage from "@/src/components/shared-components/LoadingPage";
 import NoData from "@/src/components/shared-components/NoData";
 import BreadCrumb from "@/src/components/UI/BreadCrumb";
@@ -43,7 +47,7 @@ const ProductDetailsPage = () => {
         {status === "loading" ? (
           <LoadingPage />
         ) : matchedProduct?.is_published ? (
-          <div className="space-y-20">
+          <div className="space-y-28">
             <div className="w-full flex flex-col md:flex-row gap-12">
               <div className="w-full md:w-1/2">
                 <ImageSlider productImages={matchedProduct?.product_images} />
@@ -53,6 +57,25 @@ const ProductDetailsPage = () => {
                 <ProductInfoSection product={matchedProduct} />
               </div>
             </div>
+
+            {!matchedProduct?.video ? (
+              <VideoSection
+                video={"https://www.w3schools.com/html/mov_bbb.mp4"}
+              />
+            ) : (
+              ""
+            )}
+
+            <ProductDescriptionSection
+              description={matchedProduct?.short_desc}
+            />
+
+            <ReviewsSection />
+
+            <RelatedProductSection
+              category={matchedProduct?.category}
+              productId={matchedProduct?.id}
+            />
           </div>
         ) : (
           <NoData text="Sorry! Product Not Found." />
