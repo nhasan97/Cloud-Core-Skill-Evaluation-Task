@@ -76,7 +76,7 @@ const TabPcView = () => {
 
           <div className="w-1/3 flex justify-end">
             <div className="flex items-center pr-6 mr-6 gap-6 border-r border-[#e0e0e0]">
-              <Link href="#">
+              <Link href="/wishlist">
                 <FaHeart className="text-xl text-[#202634]" />
               </Link>
               <Link href="/cart">

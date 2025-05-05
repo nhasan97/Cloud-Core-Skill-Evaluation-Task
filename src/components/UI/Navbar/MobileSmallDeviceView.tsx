@@ -79,7 +79,7 @@ const MobileSmallDeviceView = () => {
                 <Link href="/" className="navbar-links">
                   Shop
                 </Link>
-                <Link href="/" className="navbar-links">
+                <Link href="/wishlist" className="navbar-links">
                   WishList
                 </Link>
                 <Link href="#" className="navbar-links">

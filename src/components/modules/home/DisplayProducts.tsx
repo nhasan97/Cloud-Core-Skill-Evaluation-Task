@@ -1,6 +1,6 @@
 "use client";
 
-import { TProduct } from "@/src/types";
+import { TPagination, TProduct } from "@/src/types";
 import React, { useEffect, useState } from "react";
 import ProductCardSkeleton from "../../UI/skeletons/ProductCardSkeleton";
 import ProductCard from "../../UI/cards/ProductCard";
@@ -9,10 +9,11 @@ import { fetchProductThunk } from "@/src/redux/slices/productSlice";
 import NoData from "../../shared-components/NoData";
 import Container from "../../layouts/Container";
 import { toast } from "sonner";
+import Pagination from "./Pagination";
 
 const DisplayProducts = () => {
   const dispatch = useAppDispatch();
-  const { products, status, error } = useAppSelector(
+  const { products, pagination, status, error } = useAppSelector(
     (state) => state.productSlice
   );
 
@@ -23,6 +24,12 @@ const DisplayProducts = () => {
   if (error) {
     toast.error(error);
   }
+
+  const handlePageChange = (url: string | null) => {
+    if (url) {
+      dispatch(fetchProductThunk(url));
+    }
+  };
 
   const [searchText, setSearchText] = useState("");
 
@@ -63,6 +70,11 @@ const DisplayProducts = () => {
               <NoData text="No products found" />
             )}
           </div>
+
+          <Pagination
+            pagination={pagination as TPagination}
+            handlePageChange={handlePageChange}
+          />
         </div>
       </div>
     </Container>
