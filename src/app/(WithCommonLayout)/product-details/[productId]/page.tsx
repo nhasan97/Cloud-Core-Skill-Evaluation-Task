@@ -58,10 +58,8 @@ const ProductDetailsPage = () => {
               </div>
             </div>
 
-            {!matchedProduct?.video ? (
-              <VideoSection
-                video={"https://www.w3schools.com/html/mov_bbb.mp4"}
-              />
+            {matchedProduct?.video ? (
+              <VideoSection video={matchedProduct?.video as string} />
             ) : (
               ""
             )}

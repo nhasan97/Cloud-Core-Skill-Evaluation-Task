@@ -27,7 +27,7 @@ const ProductInfoSection = ({ product }: { product: TProduct }) => {
 
       {product?.has_variation ? <div>Show Variation</div> : ""}
 
-      {product?.is_discount === 0 ? (
+      {product?.is_discount === 1 ? (
         <div className="space-y-2">
           <h5 className="text-2xl lg:text-3xl text-[#202634] font-medium">
             ৳{product?.price - parseFloat(product?.discount_amount)}
