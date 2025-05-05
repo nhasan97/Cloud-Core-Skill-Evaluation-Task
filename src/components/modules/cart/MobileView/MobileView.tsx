@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const MobileView = () => {
   const { itemsInCart, totalBill } = useCartContext() as TCartContext;
-  // , total
+
   return (
     <div className="lg:hidden w-full h-screen flex flex-col gap-6">
       <div className="bg-white block lg:hidden w-full h-[90%] overflow-y-auto rounded-lg border border-gray-300">
@@ -43,7 +43,7 @@ const MobileView = () => {
           </p>
         </div>
 
-        <Link href="/checkout-page">
+        <Link href="/checkout">
           <button
             className="btn-primary-style btn-style-dark w-full mt-6"
             disabled={itemsInCart.length <= 0}
