@@ -40,14 +40,14 @@ const ProductDetailsPage = () => {
   }
 
   return (
-    <div className="w-full min-h-screen pt-18">
+    <div className="w-full min-h-screen py-20">
       <BreadCrumb />
 
       <Container>
         {status === "loading" ? (
           <LoadingPage />
         ) : matchedProduct?.is_published ? (
-          <div className="space-y-28">
+          <div className="space-y-20">
             <div className="w-full flex flex-col md:flex-row gap-12">
               <div className="w-full md:w-1/2">
                 <ImageSlider productImages={matchedProduct?.product_images} />

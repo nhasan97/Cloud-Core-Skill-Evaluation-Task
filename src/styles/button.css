@@ -17,5 +17,5 @@
 }
 
 .btn-style-dark {
-    @apply bg-[#202634] hover:bg-[#757575] text-white transition-all
+    @apply bg-[#202634] hover:bg-gray-500 text-white transition-all
 }

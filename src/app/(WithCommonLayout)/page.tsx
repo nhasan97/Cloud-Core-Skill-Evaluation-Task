@@ -4,7 +4,7 @@ import BreadCrumb from "@/src/components/UI/BreadCrumb";
 
 export default function Home() {
   return (
-    <div className="pt-18">
+    <div className="py-20">
       <BreadCrumb />
       <Banner />
       <DisplayProducts />
