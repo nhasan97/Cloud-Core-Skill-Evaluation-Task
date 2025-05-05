@@ -26,21 +26,19 @@ const CartMobileCard = ({ item }: TCartItemProp) => {
       <div className=" bg-[#9b9b9b2f] flex items-center text-center rounded-full">
         <p className="flex-1">${item?.price}</p>
 
-        <p className="flex-1">
-          <div className="flex justify-center items-center gap-4">
-            {item?.qty}
-            <div className="text-2xl">
-              <IoMdArrowDropup
-                className="hover:text-green-500"
-                onClick={() => handleEditQty(1, item)}
-              />
-              <IoMdArrowDropdown
-                className="hover:text-red-500"
-                onClick={() => handleEditQty(-1, item)}
-              />
-            </div>
+        <div className="flex-1 flex justify-center items-center gap-4">
+          <p className="">{item?.qty}</p>
+          <div className="text-2xl">
+            <IoMdArrowDropup
+              className="hover:text-green-500"
+              onClick={() => handleEditQty(1, item)}
+            />
+            <IoMdArrowDropdown
+              className="hover:text-red-500"
+              onClick={() => handleEditQty(-1, item)}
+            />
           </div>
-        </p>
+        </div>
 
         <p className="flex-1">${(item?.price * item?.qty).toFixed(2)}</p>
 
